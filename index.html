@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#101214">
+  <title>Работы — Артём Чадов</title>
+  <link rel="stylesheet" href="styles.eed7ef059f.css">
+  <script src="app.8674586913.js" defer></script>
+</head>
+<body>
+  <div class="layout">
+    <aside class="walkthrough" aria-label="О демо">
+      <div id="case-overview">
+        <p class="project-name">SF WASH</p>
+        <h2 id="walkthrough-title">Путь<br>к заявке</h2>
+        <p class="walkthrough-description">Оформи тестовую заявку и посмотри её глазами администратора.</p>
+        <nav aria-label="Этапы демо">
+          <ol class="steps">
+            <li><button class="step" type="button" data-step="works" aria-current="step"><span class="step-number" aria-hidden="true">01</span><span>Работы</span></button></li>
+            <li><button class="step" type="button" data-step="service" disabled><span class="step-number" aria-hidden="true">02</span><span>Услуга</span></button></li>
+            <li><button class="step" type="button" data-step="request" disabled><span class="step-number" aria-hidden="true">03</span><span>Тестовая заявка</span></button></li>
+            <li><button class="step" type="button" data-step="admin" disabled><span class="step-number" aria-hidden="true">04</span><span>Вид администратора</span></button></li>
+          </ol>
+        </nav>
+      </div>
+      <div id="demo-overview" hidden>
+        <p class="project-name">Работы</p>
+        <h2>Демо<br>ботов</h2>
+        <p class="walkthrough-description">Пройди запись по кнопкам или задай вопрос о химчистке.</p>
+      </div>
+    </aside>
+
+    <main class="app" aria-label="Веб-приложение «Работы»">
+      <header class="app-bar">
+        <nav id="section-nav" class="section-nav" aria-label="Разделы">
+          <a id="works-link" href="index.html" aria-current="page">Работы</a>
+          <a id="demos-link" href="?section=demos">Демо ботов</a>
+        </nav>
+        <button id="back-button" class="back-button" type="button" hidden>
+          <span aria-hidden="true">←</span><span id="back-label"></span>
+        </button>
+        <span class="demo-label">Демо</span>
+      </header>
+
+      <section class="screen" id="works" aria-labelledby="works-title">
+        <div class="screen-head">
+          <h1 id="works-title" tabindex="-1">Работы</h1>
+          <p class="description">Интерактивные примеры Артёма Чадова.</p>
+        </div>
+        <article class="work">
+          <img class="work-photo entry-photo" src="assets/interior.jpg" width="900" height="506" alt="Мастер чистит сиденье автомобиля">
+          <div class="work-body">
+            <p class="meta">Детейлинг · Псков</p>
+            <h2>SF WASH</h2>
+            <p class="description">Онлайн-запись на химчистку.</p>
+            <button class="button button-primary button-arrow" type="button" data-start="portfolio">Пройти демо SF WASH <span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+        <section class="entry-section" aria-labelledby="entry-title">
+          <h2 id="entry-title">Другие входы</h2>
+          <a class="entry-link" href="?entry=direct">
+            <span><strong>Яндекс Директ</strong><small>Посмотреть объявление</small></span>
+            <span aria-hidden="true">→</span>
+          </a>
+          <a class="entry-link" href="?entry=maps">
+            <span><strong>Яндекс Карты</strong><small>Посмотреть карточку</small></span>
+            <span aria-hidden="true">→</span>
+          </a>
+        </section>
+      </section>
+
+      <section class="screen" id="demos" aria-labelledby="demos-title" hidden>
+        <div class="screen-head">
+          <h1 id="demos-title" tabindex="-1">Демо ботов</h1>
+          <p class="description">Оба примера работают прямо в браузере.</p>
+        </div>
+        <div class="demo-list">
+          <article class="work">
+            <div class="work-body">
+              <h2 class="preview-title">Чат-бот записи</h2>
+              <p class="description">Выбери автомобиль и время по кнопкам. Затем открой заявку у администратора.</p>
+              <a class="button button-secondary button-arrow" href="?demo=chatbot">Попробовать чат-бота <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="work">
+            <div class="work-body">
+              <h2 class="preview-title">Нейробот по услугам</h2>
+              <p class="description">Спроси о цене, времени или составе химчистки. Вопрос можно передать сотруднику.</p>
+              <a class="button button-secondary button-arrow" href="?demo=neuro">Попробовать нейробота <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="screen" id="direct" aria-labelledby="direct-title" hidden>
+        <div class="screen-head">
+          <h1 id="direct-title" tabindex="-1">Яндекс Директ</h1>
+          <p class="description">Пример объявления на поиске</p>
+        </div>
+        <div class="search-query">
+          <p class="meta">Что искал человек</p>
+          <p>«химчистка салона Псков»</p>
+        </div>
+        <article class="work">
+          <div class="work-body">
+            <p class="meta">SF WASH · Пример рекламы</p>
+            <h2 class="preview-title">Химчистка салона в Пскове</h2>
+            <p class="description">Посмотри, что входит в химчистку, и выбери удобное время.</p>
+            <button class="button button-primary button-arrow" type="button" data-start="direct">Перейти из объявления <span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+      </section>
+
+      <section class="screen" id="maps" aria-labelledby="maps-title" hidden>
+        <div class="screen-head">
+          <h1 id="maps-title" tabindex="-1">Яндекс Карты</h1>
+          <p class="description">Пример карточки организации</p>
+        </div>
+        <article class="work">
+          <img class="work-photo entry-photo" src="assets/interior.jpg" width="900" height="506" alt="Мастер чистит автомобильное сиденье">
+          <div class="work-body">
+            <p class="meta">Детейлинг · Псков</p>
+            <h2>SF WASH</h2>
+            <div class="summary-row map-service">
+              <span class="meta">Услуга</span>
+              <strong>Химчистка салона</strong>
+            </div>
+            <button class="button button-primary button-arrow" type="button" data-start="maps">Открыть услугу из Карт <span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+      </section>
+
+      <section class="screen" id="service" aria-labelledby="service-title" hidden>
+        <div class="screen-head">
+          <p class="origin-label" id="service-origin"></p>
+          <h1 id="service-title" tabindex="-1">Химчистка салона</h1>
+          <p class="description">SF WASH · Тестовые условия</p>
+        </div>
+        <article class="work">
+          <img class="work-photo entry-photo" src="assets/interior.jpg" width="900" height="506" alt="Чистка сиденья в салоне автомобиля">
+          <div class="work-body">
+            <dl class="service-facts">
+              <div><dt>Цена в демо</dt><dd>от 6 000 ₽</dd></div>
+              <div><dt>Время в демо</dt><dd>4–6 часов</dd></div>
+            </dl>
+            <p class="description">В примере чистят сиденья, коврики и пластик салона.</p>
+          </div>
+        </article>
+        <div class="actions">
+          <button class="button button-primary button-arrow" type="button" data-open="request">К тестовой заявке <span aria-hidden="true">→</span></button>
+        </div>
+      </section>
+
+      <section class="screen" id="chat" aria-labelledby="chat-title" hidden>
+        <div class="screen-head">
+          <h1 id="chat-title" tabindex="-1">Нейробот SF WASH</h1>
+          <p class="description">Отвечает по демо-справке. Вопрос можно передать в демо-входящие.</p>
+        </div>
+        <div class="thread" id="thread" role="log" aria-label="Диалог с нейроботом" aria-live="polite" tabindex="0">
+          <div id="first-message" class="message message-bot">
+            <span class="message-author">Нейробот</span>
+            <p>Привет! Что подсказать про химчистку салона?</p>
+          </div>
+        </div>
+        <div class="prompts" aria-label="Быстрые вопросы" role="group">
+          <button class="prompt" type="button">Сколько стоит?</button>
+          <button class="prompt" type="button">Как долго?</button>
+          <button class="prompt" type="button">Что входит?</button>
+        </div>
+        <form class="composer" id="question-form" autocomplete="off">
+          <label class="sr-only" for="question">Твой вопрос</label>
+          <input id="question" type="text" maxlength="160" placeholder="Твой вопрос" required>
+          <button class="send-question" type="submit" aria-label="Отправить вопрос"><span aria-hidden="true">↑</span></button>
+        </form>
+        <button class="button button-primary button-arrow chat-next" id="hand-off" type="button" disabled>Передать вопрос администратору <span aria-hidden="true">→</span></button>
+      </section>
+
+      <section class="screen" id="request" aria-labelledby="request-title" hidden>
+        <div class="screen-head">
+          <h1 id="request-title" tabindex="-1">Тестовая заявка</h1>
+          <p class="description">Данные останутся в этой вкладке.</p>
+        </div>
+        <div id="request-body" class="request-form">
+          <div class="summary-row">
+            <span class="meta">Услуга</span>
+            <strong>Химчистка салона</strong>
+          </div>
+          <div class="method-switch" id="method-switch" role="group" aria-label="Способ оформления заявки">
+            <button type="button" data-method="form" aria-pressed="true">Форма на сайте</button>
+            <button type="button" data-method="guided" aria-pressed="false">Пошаговая запись</button>
+          </div>
+          <form id="request-form" class="request-form" autocomplete="off">
+            <label class="field">
+              <span>Имя для теста</span>
+              <input id="visitor-name" name="visitor" type="text" required maxlength="48" value="Тестовый посетитель">
+            </label>
+            <label class="field">
+              <span>Автомобиль</span>
+              <select name="car">
+                <option>Кроссовер</option>
+                <option>Седан</option>
+                <option>Универсал</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Удобное время</span>
+              <select name="time">
+                <option>В будни после 18:00</option>
+                <option>В субботу до обеда</option>
+                <option>Любое время</option>
+              </select>
+            </label>
+            <button class="button button-primary button-arrow" type="submit">Отправить тестовую заявку <span aria-hidden="true">→</span></button>
+          </form>
+          <section id="booking" class="request-form" aria-label="Поля пошаговой записи" hidden>
+            <div class="message booking-message" id="booking-message">
+              <span class="message-author" id="booking-author"></span>
+              <p id="booking-question" aria-live="polite"></p>
+            </div>
+            <div id="booking-options" class="booking-options"></div>
+            <dl class="booking-review" id="booking-review" hidden>
+              <div><dt>Автомобиль</dt><dd id="booking-car"></dd></div>
+              <div><dt>Удобное время</dt><dd id="booking-time"></dd></div>
+            </dl>
+            <button class="button button-primary button-arrow" id="booking-submit" type="button" hidden>Подтвердить тестовую заявку <span aria-hidden="true">→</span></button>
+            <button class="button button-secondary" id="booking-back" type="button" hidden></button>
+          </section>
+        </div>
+        <div class="confirmation" id="request-success" hidden>
+          <p class="confirmation-mark" aria-hidden="true">✓</p>
+          <h2 id="success-title" tabindex="-1">Заявка создана</h2>
+          <p class="description" id="success-description"></p>
+          <button class="button button-primary button-arrow" type="button" data-open="admin">Открыть вид администратора <span aria-hidden="true">→</span></button>
+        </div>
+      </section>
+
+      <section class="screen" id="admin" aria-labelledby="admin-title" hidden>
+        <div class="screen-head">
+          <h1 id="admin-title" tabindex="-1">У администратора</h1>
+          <p class="description" id="admin-description">Тестовые входящие SF WASH</p>
+        </div>
+        <article class="ticket" aria-labelledby="ticket-title">
+          <div class="ticket-meta">
+            <span class="meta" id="ticket-number"></span>
+            <span class="ticket-status" id="ticket-status" tabindex="-1"></span>
+          </div>
+          <h2 id="ticket-title">Химчистка салона</h2>
+          <dl class="route-summary">
+            <div><dt>Откуда пришёл</dt><dd id="ticket-source"></dd></div>
+            <div><dt>Как оформил</dt><dd id="ticket-method"></dd></div>
+          </dl>
+          <dl class="ticket-fields">
+            <div><dt>Посетитель</dt><dd id="ticket-name"></dd></div>
+            <div id="ticket-car-row"><dt>Автомобиль</dt><dd id="ticket-car"></dd></div>
+            <div id="ticket-time-row"><dt>Удобное время</dt><dd id="ticket-time"></dd></div>
+          </dl>
+          <div class="excerpt ticket-excerpt" id="ticket-excerpt" hidden>
+            <p class="meta">Вопрос из чата</p>
+            <p id="ticket-question"></p>
+            <p id="ticket-answer" class="description" hidden></p>
+          </div>
+          <div class="excerpt ticket-excerpt" id="ticket-pending" hidden>
+            <p class="meta">Нужен ответ</p>
+            <p id="ticket-pending-question"></p>
+          </div>
+        </article>
+        <div class="actions">
+          <button class="button button-primary" id="take-request" type="button">Взять в работу</button>
+          <button class="button button-secondary" id="restart-button" type="button">Пройти ещё раз</button>
+        </div>
+      </section>
+      <noscript><p class="noscript">Включи JavaScript, чтобы пройти прототип.</p></noscript>
+    </main>
+  </div>
+</body>
+</html>
