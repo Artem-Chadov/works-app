@@ -6,9 +6,10 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#101214">
   <title>Работы — Артём Чадов</title>
-  <link rel="stylesheet" href="styles.1f1610db71.css">
+  <link rel="stylesheet" href="styles.b6be049728.css">
   <script src="promotion.97ebb94503.js" defer></script>
-  <script src="app.8ef6e06735.js" defer></script>
+  <script src="inquiries.1eda9ac957.js" defer></script>
+  <script src="app.1377e49148.js" defer></script>
   <script src="cases.6f2cc592d1.js" defer></script>
 </head>
 <body>
@@ -579,6 +580,37 @@
           <p id="report-session-ticket" class="description"></p>
         </section>
       </section>
+      <div class="case-contact" id="case-contact" hidden>
+        <button class="button button-secondary button-arrow" id="discuss-button" type="button" aria-haspopup="dialog">Обсудить проект <span aria-hidden="true">→</span></button>
+      </div>
+      <dialog class="inquiry-dialog" id="inquiry-dialog" aria-labelledby="inquiry-title">
+        <button class="inquiry-close" id="inquiry-close" type="button" aria-label="Закрыть форму">×</button>
+        <p class="origin-label" id="inquiry-origin"></p>
+        <h2 id="inquiry-title">Обсудить проект</h2>
+        <form class="request-form inquiry-form" id="inquiry-form" novalidate>
+          <p class="description">Заявку получит Артём в Telegram.</p>
+          <div class="field">
+            <label for="inquiry-contact">Контакт для ответа</label>
+            <p class="meta" id="inquiry-contact-hint">Telegram, телефон или почта</p>
+            <input class="input" id="inquiry-contact" name="contact" type="text" maxlength="120" required aria-describedby="inquiry-contact-hint inquiry-contact-error" autofocus>
+            <p class="inquiry-error" id="inquiry-contact-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="inquiry-details">Что нужно сделать?</label>
+            <textarea class="input" id="inquiry-details" name="details" maxlength="1500" rows="4" required aria-describedby="inquiry-details-count inquiry-details-error"></textarea>
+            <p class="meta" id="inquiry-details-count">0 / 1 500</p>
+            <p class="inquiry-error" id="inquiry-details-error" hidden></p>
+          </div>
+          <p class="inquiry-error" id="inquiry-error" role="alert" hidden></p>
+          <button class="button button-primary" id="inquiry-submit" type="submit">Отправить заявку</button>
+        </form>
+        <div class="inquiry-result" id="inquiry-result" hidden>
+          <h3 id="inquiry-success" tabindex="-1">Заявка отправлена</h3>
+          <p class="description">Артём получил заявку и твой контакт.</p>
+          <p class="meta" id="inquiry-reference"></p>
+          <button class="button button-secondary" id="inquiry-done" type="button">К кейсу</button>
+        </div>
+      </dialog>
       <noscript><p class="noscript">Включи JavaScript, чтобы пройти прототип.</p></noscript>
     </main>
   </div>
