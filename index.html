@@ -3,23 +3,41 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Артём Чадов. Сайты, мини-приложения, боты и продвижение для бизнеса. Попробуй интерактивные кейсы и оставь заявку на свой проект.">
   <meta name="theme-color" content="#101214">
-  <title>Работы — Артём Чадов</title>
-  <link rel="stylesheet" href="styles.29bfd6f71a.css">
+  <title>Артём Чадов — сайты, мини-приложения и продвижение</title>
+  <link rel="canonical" href="https://artem-chadov.github.io/works-app/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:url" content="https://artem-chadov.github.io/works-app/">
+  <meta property="og:title" content="Артём Чадов — сайты, мини-приложения и продвижение">
+  <meta property="og:description" content="Попробуй интерактивные кейсы и посмотри, как клиент доходит до заявки.">
+  <meta property="og:image" content="https://artem-chadov.github.io/works-app/assets/portfolio-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Портфолио Артёма Чадова с примерами сайтов и онлайн-записи">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/portfolio-icon.png">
+  <link rel="preload" as="font" href="assets/golos-text.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="assets/unbounded-cyrillic.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="assets/unbounded-latin.woff2" type="font/woff2" crossorigin>
+  <script>
+    const initialRoute = new URLSearchParams(location.search);
+    if (["case", "entry", "demo", "report", "section"].some((key) => initialRoute.has(key))) {
+      document.documentElement.classList.add("route-pending");
+      document.addEventListener("DOMContentLoaded", () => {
+        document.documentElement.classList.remove("route-pending");
+      }, { once: true });
+    }
+  </script>
+  <link rel="stylesheet" href="styles.f3dd46355d.css">
   <script src="promotion.97ebb94503.js" defer></script>
-  <script src="inquiries.80621d6304.js" defer></script>
-  <script src="app.5a506505ac.js" defer></script>
+  <script src="inquiries.90c274fbfb.js" defer></script>
+  <script src="app.d44db8fb2c.js" defer></script>
   <script src="cases.6f2cc592d1.js" defer></script>
 </head>
 <body>
-  <div class="layout">
+  <div class="layout layout-hub">
     <aside class="walkthrough" aria-label="О разделе">
-      <div id="home-overview">
-        <p class="project-name">Веб-разработчик</p>
-        <h2>Артём<br>Чадов</h2>
-        <p class="walkthrough-description">Выбери задачу и проверь на примере, как работает решение.</p>
-      </div>
       <div id="case-overview" hidden>
         <p class="project-name">SF WASH</p>
         <h2 id="walkthrough-title">Путь<br>к заявке</h2>
@@ -40,8 +58,8 @@
       </div>
       <div id="portfolio-overview" hidden>
         <p class="project-name">Артём Чадов</p>
-        <h2>Выбери<br>услугу</h2>
-        <p class="walkthrough-description">Открой пример и попробуй действие посетителя.</p>
+        <h2>Пример<br>работы</h2>
+        <p class="walkthrough-description">Попробуй действие клиента и обсуди свой проект.</p>
       </div>
       <div id="report-overview" hidden>
         <p class="project-name">SF WASH</p>
@@ -64,71 +82,87 @@
       </header>
 
       <section class="screen" id="works" aria-labelledby="works-title">
-        <div class="screen-head">
-          <p class="home-author">Артём Чадов</p>
-          <h1 id="works-title" tabindex="-1">Сайты, <span>мини-приложения</span> и продвижение</h1>
-        </div>
-        <nav class="task-picker" aria-label="Выбор задачи">
-          <a class="entry-link" href="?case=transkanada&amp;from=works">
-            <span><strong>Нужен сайт</strong><small>Каталог и страницы маршрутов</small></span>
-            <span aria-hidden="true">→</span>
-          </a>
-          <a class="entry-link" href="?entry=portfolio">
-            <span><strong>Нужна онлайн-запись</strong><small>Форма записи и карточка заявки</small></span>
-            <span aria-hidden="true">→</span>
-          </a>
-          <a class="entry-link" href="?section=services">
-            <span><strong>Хочу привлекать клиентов</strong><small>Реклама, Яндекс Карты и SEO</small></span>
-            <span aria-hidden="true">→</span>
-          </a>
-        </nav>
-        <div id="home-contact"></div>
-        <article class="work">
-          <img class="work-photo entry-photo" src="assets/interior.jpg" width="900" height="506" alt="Мастер чистит сиденье автомобиля">
-          <div class="work-body">
-            <p class="meta">Детейлинг · Псков</p>
-            <h2>SF WASH</h2>
-            <p class="description">Онлайн-запись на химчистку.</p>
-            <button class="button button-primary button-arrow" type="button" data-start="portfolio">Пройти демо SF WASH <span aria-hidden="true">→</span></button>
+        <div class="portfolio-intro">
+          <div class="screen-head">
+            <h1 id="works-title" tabindex="-1">Сайты,<br><span>мини-приложения</span><br>и продвижение</h1>
+            <p class="portfolio-owner">Артём Чадов · Псков и удалённо</p>
+            <p class="description">Пройди путь клиента и посмотри, какую заявку получит бизнес.</p>
           </div>
-        </article>
-        <section class="entry-section" aria-labelledby="entry-title">
-          <h2 id="entry-title">Другие входы</h2>
-          <a class="entry-link" href="?entry=direct">
-            <span><strong>Яндекс Директ</strong><small>Посмотреть объявление</small></span>
-            <span aria-hidden="true">→</span>
-          </a>
-          <a class="entry-link" href="?entry=target">
-            <span><strong>Таргет</strong><small>Выбрать объявление</small></span>
-            <span aria-hidden="true">→</span>
-          </a>
-          <a class="entry-link" href="?entry=maps">
-            <span><strong>Яндекс Карты</strong><small>Посмотреть карточку</small></span>
-            <span aria-hidden="true">→</span>
-          </a>
-        </section>
-        <section class="entry-section" aria-labelledby="other-works-title">
-          <h2 id="other-works-title">Другие работы</h2>
-          <a class="entry-link" href="?case=transkanada&amp;from=works">
-            <span><strong>Трансканада</strong><small>Сайт авторских туров</small></span>
-            <span aria-hidden="true">→</span>
-          </a>
-          <a class="entry-link" href="?case=pablo&amp;from=works">
-            <span><strong>Пабло</strong><small>Меню и запрос стола</small></span>
-            <span aria-hidden="true">→</span>
-          </a>
-          <a class="entry-link" href="?case=elementaqua&amp;from=works">
-            <span><strong>ElementAqua</strong><small>SEO и страницы услуг</small></span>
-            <span aria-hidden="true">→</span>
-          </a>
+          <div>
+            <nav class="task-picker" aria-label="Выбор задачи">
+              <a class="entry-link" href="?case=transkanada&amp;from=works">
+                <span><strong>Нужен сайт</strong><small>Каталог и страницы маршрутов</small></span>
+                <span aria-hidden="true">→</span>
+              </a>
+              <a class="entry-link" href="?entry=portfolio">
+                <span><strong>Нужна онлайн-запись</strong><small>Форма записи и карточка заявки</small></span>
+                <span aria-hidden="true">→</span>
+              </a>
+              <a class="entry-link" href="?section=services">
+                <span><strong>Хочу привлекать клиентов</strong><small>Реклама, Яндекс Карты и SEO</small></span>
+                <span aria-hidden="true">→</span>
+              </a>
+            </nav>
+            <div id="home-contact">
+              <div class="case-contact" id="case-contact">
+                <button class="button button-secondary button-arrow" id="discuss-button" type="button" aria-haspopup="dialog" disabled>Обсудить проект <span aria-hidden="true">→</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="portfolio-cases" aria-labelledby="portfolio-cases-title">
+          <h2 id="portfolio-cases-title">Интерактивные кейсы</h2>
+          <div class="portfolio-grid">
+            <a class="portfolio-card" href="?case=transkanada&amp;from=works">
+              <img src="assets/rockies.jpg" width="1280" height="862" alt="" loading="lazy" decoding="async">
+              <div class="portfolio-card-body">
+                <p class="meta">Сайт · Авторский концепт</p>
+                <h3>Трансканада</h3>
+                <p class="description">Выбери тур и открой программу по дням.</p>
+              </div>
+            </a>
+            <a class="portfolio-card" href="?entry=portfolio">
+              <img src="assets/interior.jpg" width="900" height="506" alt="" loading="lazy" decoding="async">
+              <div class="portfolio-card-body">
+                <p class="meta">Онлайн-запись · Демо</p>
+                <h3>SF WASH</h3>
+                <p class="description">Запишись и посмотри заявку.</p>
+              </div>
+            </a>
+            <a class="portfolio-card" href="?case=pablo&amp;from=works">
+              <img src="assets/pablo.jpg" width="1000" height="666" alt="" loading="lazy" decoding="async">
+              <div class="portfolio-card-body">
+                <p class="meta">Мини-приложение · Демо</p>
+                <h3>Пабло</h3>
+                <p class="description">Посмотри меню и попробуй запросить стол.</p>
+              </div>
+            </a>
+            <a class="portfolio-card" href="?case=elementaqua&amp;from=works">
+              <div class="portfolio-search" aria-hidden="true">
+                <span class="meta">Поисковый запрос</span>
+                <strong>Перевозка аквариума</strong>
+                <span class="meta">↓ Страница услуги</span>
+              </div>
+              <div class="portfolio-card-body">
+                <p class="meta">SEO · Аудит и макеты</p>
+                <h3>ElementAqua</h3>
+                <p class="description">Сравни, какие страницы нужны под разные запросы.</p>
+              </div>
+            </a>
+          </div>
         </section>
       </section>
 
       <section class="screen" id="services" aria-labelledby="services-title" hidden>
-        <div class="screen-head">
-          <h1 id="services-title" tabindex="-1">Услуги</h1>
-          <p class="description">Выбери, что хочешь попробовать.</p>
+        <div class="screen-head service-heading">
+          <div>
+            <h1 id="services-title" tabindex="-1">Услуги</h1>
+            <p class="description">Выбери услугу и попробуй её на конкретном примере.</p>
+          </div>
+          <div id="services-contact"></div>
         </div>
+        <div class="service-grid">
         <section class="entry-section promotion-service" aria-labelledby="promotion-title">
           <h2 id="promotion-title">Продвижение</h2>
           <a class="entry-link" href="?entry=direct&amp;from=services">
@@ -143,31 +177,40 @@
             <span><strong>Яндекс Карты</strong><small>Карточка студии</small></span>
             <span aria-hidden="true">→</span>
           </a>
+          <a class="entry-link" href="?case=elementaqua">
+            <span><strong>SEO</strong><small>Поисковые запросы и страницы услуг</small></span>
+            <span aria-hidden="true">→</span>
+          </a>
           <a class="button button-secondary button-arrow" href="?report=all">Открыть учебный отчёт <span aria-hidden="true">→</span></a>
         </section>
         <div class="demo-list">
           <article class="work">
             <div class="work-body">
               <h2 class="preview-title">Сайты</h2>
-              <p class="description">В «Трансканаде» выбор тура ведёт к программе поездки.</p>
+              <p class="description">Лендинги, каталоги, сайты услуг.</p>
               <a class="button button-secondary button-arrow" href="?case=transkanada">Выбрать маршрут <span aria-hidden="true">→</span></a>
             </div>
           </article>
           <article class="work">
             <div class="work-body">
               <h2 class="preview-title">Мини-приложения</h2>
-              <p class="description">В «Пабло» гость смотрит меню и запрашивает стол.</p>
+              <p class="description">Меню, запись и бронирование.</p>
               <a class="button button-secondary button-arrow" href="?case=pablo">Открыть «Пабло» <span aria-hidden="true">→</span></a>
             </div>
           </article>
           <article class="work">
             <div class="work-body">
-              <h2 class="preview-title">SEO</h2>
-              <p class="description">В ElementAqua каждый запрос ведёт к подходящей услуге.</p>
-              <a class="button button-secondary button-arrow" href="?case=elementaqua">Попробовать SEO-кейс <span aria-hidden="true">→</span></a>
+              <h2 class="preview-title">Чат-боты и нейроботы</h2>
+              <p class="description">Ответы и запись по кнопкам.</p>
+              <a class="button button-secondary button-arrow" href="?section=demos">Попробовать ботов <span aria-hidden="true">→</span></a>
             </div>
           </article>
         </div>
+        </div>
+        <section class="service-start" aria-labelledby="service-start-title">
+          <h2 id="service-start-title">Как начать проект</h2>
+          <p class="description">Опиши задачу и оставь контакт. Я уточню детали, предложу первый шаг и согласую с тобой объём и сроки.</p>
+        </section>
       </section>
 
       <section class="screen" id="transkanada" aria-labelledby="transkanada-title" hidden>
@@ -341,14 +384,14 @@
           <article class="work">
             <div class="work-body">
               <h2 class="preview-title">Чат-бот записи</h2>
-              <p class="description">Выбери автомобиль и время по кнопкам. Затем открой заявку у администратора.</p>
+              <p class="description">Выбери автомобиль и время.</p>
               <a class="button button-secondary button-arrow" href="?demo=chatbot">Попробовать чат-бота <span aria-hidden="true">→</span></a>
             </div>
           </article>
           <article class="work">
             <div class="work-body">
               <h2 class="preview-title">Нейробот по услугам</h2>
-              <p class="description">Спроси о цене, времени или составе химчистки. Вопрос можно передать сотруднику.</p>
+              <p class="description">Спроси о химчистке салона.</p>
               <a class="button button-secondary button-arrow" href="?demo=neuro">Попробовать нейробота <span aria-hidden="true">→</span></a>
             </div>
           </article>
@@ -463,11 +506,10 @@
           <button class="prompt" type="button">Что входит?</button>
         </div>
         <form class="composer" id="question-form" autocomplete="off">
-          <label class="sr-only" for="question">Твой вопрос</label>
-          <input id="question" type="text" maxlength="160" placeholder="Твой вопрос" required>
+          <input id="question" type="text" maxlength="160" aria-label="Твой вопрос" placeholder="Твой вопрос" required>
           <button class="send-question" type="submit" aria-label="Отправить вопрос"><span aria-hidden="true">↑</span></button>
         </form>
-        <button class="button button-primary button-arrow chat-next" id="hand-off" type="button" disabled>Передать вопрос администратору <span aria-hidden="true">→</span></button>
+        <button class="button button-primary chat-next" id="hand-off" type="button" disabled>Передать администратору</button>
       </section>
 
       <section class="screen" id="request" aria-labelledby="request-title" hidden>
@@ -605,15 +647,16 @@
           <p id="report-session-ticket" class="description"></p>
         </section>
       </section>
-      <div class="case-contact" id="case-contact" hidden>
-        <button class="button button-secondary button-arrow" id="discuss-button" type="button" aria-haspopup="dialog">Обсудить проект <span aria-hidden="true">→</span></button>
-      </div>
+      <footer class="portfolio-footer" id="portfolio-footer">
+        <p>Артём Чадов <span class="meta">Псков и удалённо</span></p>
+        <a href="https://t.me/Artem_Chadov" target="_blank" rel="noopener">Написать в Telegram</a>
+      </footer>
       <dialog class="inquiry-dialog" id="inquiry-dialog" aria-labelledby="inquiry-title">
         <button class="inquiry-close" id="inquiry-close" type="button" aria-label="Закрыть форму">×</button>
         <p class="origin-label" id="inquiry-origin"></p>
         <h2 id="inquiry-title">Обсудить проект</h2>
         <form class="request-form inquiry-form" id="inquiry-form" novalidate>
-          <p class="description">Заявку получит Артём в Telegram.</p>
+          <p class="description">Артём получит заявку в Telegram и ответит по указанному контакту.</p>
           <div class="field">
             <label for="inquiry-contact">Контакт для ответа</label>
             <p class="meta" id="inquiry-contact-hint">Telegram, телефон или почта</p>
@@ -627,6 +670,7 @@
             <p class="inquiry-error" id="inquiry-details-error" hidden></p>
           </div>
           <p class="inquiry-error" id="inquiry-error" role="alert" hidden></p>
+          <a class="inquiry-fallback" id="inquiry-fallback" href="https://t.me/Artem_Chadov" target="_blank" rel="noopener" hidden>Написать в Telegram</a>
           <button class="button button-primary" id="inquiry-submit" type="submit">Отправить заявку</button>
         </form>
         <div class="inquiry-result" id="inquiry-result" hidden>
@@ -636,7 +680,7 @@
           <button class="button button-secondary" id="inquiry-done" type="button">К кейсу</button>
         </div>
       </dialog>
-      <noscript><p class="noscript">Включи JavaScript, чтобы пройти прототип.</p></noscript>
+      <noscript><p class="noscript">Включи JavaScript, чтобы открыть демо и форму заявки.</p></noscript>
     </main>
   </div>
 </body>
