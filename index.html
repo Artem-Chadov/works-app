@@ -6,8 +6,9 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#101214">
   <title>Работы — Артём Чадов</title>
-  <link rel="stylesheet" href="styles.eed7ef059f.css">
-  <script src="app.8674586913.js" defer></script>
+  <link rel="stylesheet" href="styles.b3518884c4.css">
+  <script src="app.8ce0831c83.js" defer></script>
+  <script src="cases.6f2cc592d1.js" defer></script>
 </head>
 <body>
   <div class="layout">
@@ -30,13 +31,19 @@
         <h2>Демо<br>ботов</h2>
         <p class="walkthrough-description">Пройди запись по кнопкам или задай вопрос о химчистке.</p>
       </div>
+      <div id="portfolio-overview" hidden>
+        <p class="project-name">Артём Чадов</p>
+        <h2>Выбери<br>услугу</h2>
+        <p class="walkthrough-description">Открой пример и попробуй действие посетителя.</p>
+      </div>
     </aside>
 
     <main class="app" aria-label="Веб-приложение «Работы»">
       <header class="app-bar">
         <nav id="section-nav" class="section-nav" aria-label="Разделы">
-          <a id="works-link" href="index.html" aria-current="page">Работы</a>
-          <a id="demos-link" href="?section=demos">Демо ботов</a>
+          <a id="works-link" data-section="works" href="index.html" aria-current="page">Работы</a>
+          <a id="services-link" data-section="services" href="?section=services">Услуги</a>
+          <a id="demos-link" data-section="demos" href="?section=demos">Демо ботов</a>
         </nav>
         <button id="back-button" class="back-button" type="button" hidden>
           <span aria-hidden="true">←</span><span id="back-label"></span>
@@ -68,6 +75,208 @@
             <span><strong>Яндекс Карты</strong><small>Посмотреть карточку</small></span>
             <span aria-hidden="true">→</span>
           </a>
+        </section>
+        <section class="entry-section" aria-labelledby="other-works-title">
+          <h2 id="other-works-title">Другие работы</h2>
+          <a class="entry-link" href="?case=transkanada&amp;from=works">
+            <span><strong>Трансканада</strong><small>Сайт авторских туров</small></span>
+            <span aria-hidden="true">→</span>
+          </a>
+          <a class="entry-link" href="?case=pablo&amp;from=works">
+            <span><strong>Пабло</strong><small>Меню и запрос стола</small></span>
+            <span aria-hidden="true">→</span>
+          </a>
+          <a class="entry-link" href="?case=elementaqua&amp;from=works">
+            <span><strong>ElementAqua</strong><small>SEO и страницы услуг</small></span>
+            <span aria-hidden="true">→</span>
+          </a>
+        </section>
+      </section>
+
+      <section class="screen" id="services" aria-labelledby="services-title" hidden>
+        <div class="screen-head">
+          <h1 id="services-title" tabindex="-1">Услуги</h1>
+          <p class="description">Выбери, что хочешь попробовать.</p>
+        </div>
+        <div class="demo-list">
+          <article class="work">
+            <div class="work-body">
+              <h2 class="preview-title">Сайты</h2>
+              <p class="description">В «Трансканаде» выбор тура ведёт к программе поездки.</p>
+              <a class="button button-secondary button-arrow" href="?case=transkanada">Выбрать маршрут <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="work">
+            <div class="work-body">
+              <h2 class="preview-title">Мини-приложения</h2>
+              <p class="description">В «Пабло» гость смотрит меню и запрашивает стол.</p>
+              <a class="button button-secondary button-arrow" href="?case=pablo">Открыть «Пабло» <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="work">
+            <div class="work-body">
+              <h2 class="preview-title">SEO</h2>
+              <p class="description">В ElementAqua каждый запрос ведёт к подходящей услуге.</p>
+              <a class="button button-secondary button-arrow" href="?case=elementaqua">Попробовать SEO-кейс <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="screen" id="transkanada" aria-labelledby="transkanada-title" hidden>
+        <div class="screen-head">
+          <p class="origin-label">Сайты · Авторский концепт</p>
+          <h1 id="transkanada-title" tabindex="-1">Трансканада</h1>
+          <p class="description">Выбери маршрут и открой программу поездки.</p>
+        </div>
+        <div class="case-choices" role="group" aria-label="Маршрут">
+          <button class="prompt" type="button" data-trip="rockies" aria-pressed="true">Скалистые горы</button>
+          <button class="prompt" type="button" data-trip="yukon" aria-pressed="false">Юкон</button>
+          <button class="prompt" type="button" data-trip="churchill" aria-pressed="false">Черчилль</button>
+        </div>
+        <article class="work">
+          <img class="work-photo case-photo" id="trip-photo" src="assets/rockies.jpg" width="1280" height="862" alt="Озеро Морейн в Скалистых горах" loading="lazy">
+          <div class="work-body">
+            <div aria-live="polite">
+              <p class="meta" id="trip-duration"></p>
+              <h2 class="preview-title" id="trip-name"></h2>
+            </div>
+            <p class="description" id="trip-description"></p>
+            <details class="case-details">
+              <summary>Первые три дня</summary>
+              <ol id="trip-itinerary" class="case-list itinerary"></ol>
+            </details>
+          </div>
+        </article>
+        <details class="case-details case-note">
+          <summary>Как устроен сайт</summary>
+          <p class="description">У каждого тура своя страница и программа. Из списка можно сразу перейти к поездке, которая заинтересовала.</p>
+        </details>
+      </section>
+
+      <section class="screen" id="pablo" aria-labelledby="pablo-title" hidden>
+        <div class="screen-head">
+          <p class="origin-label">Мини-приложения · Демо</p>
+          <h1 id="pablo-title" tabindex="-1">Пабло</h1>
+          <p class="description">Посмотри меню и запроси стол на удобное время.</p>
+        </div>
+        <article class="work">
+          <img class="work-photo case-photo pablo-photo" src="assets/pablo.jpg" width="1000" height="666" alt="Зал гастропаба «Пабло»" loading="lazy">
+          <div class="work-body">
+            <h2 class="preview-title">Фрагмент меню</h2>
+            <div class="case-choices in-card" role="group" aria-label="Раздел меню">
+              <button class="prompt" type="button" data-menu="street" aria-pressed="true">Стритфуд</button>
+              <button class="prompt" type="button" data-menu="salads" aria-pressed="false">Салаты</button>
+            </div>
+            <ul class="case-list menu-list" id="pablo-menu" aria-live="polite"></ul>
+            <button class="button button-primary button-arrow" id="pablo-book" type="button" aria-expanded="false" aria-controls="pablo-booking">Запросить стол <span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+        <section class="work case-followup" id="pablo-booking" aria-labelledby="pablo-booking-title" hidden>
+          <div class="work-body">
+            <h2 class="preview-title" id="pablo-booking-title" tabindex="-1">Запрос стола</h2>
+            <p class="description">Время и наличие столов в демо условные.</p>
+            <form class="request-form case-fields" id="pablo-form">
+              <label class="field">
+                <span>День</span>
+                <select name="day">
+                  <option value="fri">Пятница</option>
+                  <option value="sat">Суббота</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>Время</span>
+                <select name="time" required>
+                  <option value="">Выбери время</option>
+                  <option value="18:00">18:00</option>
+                  <option value="19:30">19:30</option>
+                  <option value="21:00">21:00</option>
+                </select>
+              </label>
+              <p class="meta" id="pablo-time-note" role="status"></p>
+              <label class="field">
+                <span>Число гостей</span>
+                <select name="guests">
+                  <option value="2">2 гостя</option>
+                  <option value="4">4 гостя</option>
+                  <option value="6">6 гостей</option>
+                </select>
+              </label>
+              <button class="button button-primary button-arrow" type="submit">Отправить тестовый запрос <span aria-hidden="true">→</span></button>
+            </form>
+            <div id="pablo-result" class="case-fields" hidden>
+              <p class="meta">Тестовый запрос</p>
+              <h3 id="pablo-result-title" tabindex="-1">У администратора</h3>
+              <span class="ticket-status">Ждёт подтверждения</span>
+              <dl class="ticket-fields">
+                <div><dt>День</dt><dd id="pablo-result-day"></dd></div>
+                <div><dt>Время</dt><dd id="pablo-result-time"></dd></div>
+                <div><dt>Гости</dt><dd id="pablo-result-guests"></dd></div>
+              </dl>
+              <button class="button button-secondary" id="pablo-edit" type="button">Изменить запрос</button>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="screen" id="elementaqua" aria-labelledby="elementaqua-title" hidden>
+        <div class="screen-head">
+          <p class="origin-label">SEO · Аудит и макеты</p>
+          <h1 id="elementaqua-title" tabindex="-1">ElementAqua</h1>
+          <p class="description">Выбери запрос и открой подходящую страницу услуги.</p>
+        </div>
+        <div class="case-choices" role="group" aria-label="Выбор поискового запроса">
+          <button class="prompt" type="button" data-seo="move" aria-pressed="true">Перевозка</button>
+          <button class="prompt" type="button" data-seo="care" aria-pressed="false">Обслуживание</button>
+        </div>
+        <div class="search-query" aria-live="polite">
+          <p class="meta">Пример поискового запроса</p>
+          <p id="seo-query"></p>
+        </div>
+        <article class="work">
+          <div class="work-body">
+            <p class="meta">Макет страницы услуги</p>
+            <h2 class="preview-title" id="seo-page-title"></h2>
+            <p class="description" id="seo-page-description"></p>
+            <details class="case-details">
+              <summary>Что предложено изменить</summary>
+              <dl class="seo-comparison">
+                <div><dt>В аудите</dt><dd id="seo-before"></dd></div>
+                <div><dt>В макете</dt><dd id="seo-after"></dd></div>
+              </dl>
+            </details>
+            <button class="button button-primary button-arrow" id="seo-next" type="button" aria-expanded="false" aria-controls="seo-parameters">Собрать параметры <span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+        <section class="work case-followup" id="seo-parameters" aria-labelledby="seo-params-title" hidden>
+          <div class="work-body">
+            <h2 class="preview-title" id="seo-params-title" tabindex="-1">Параметры запроса</h2>
+            <form class="request-form case-fields" id="seo-form">
+              <label class="field">
+                <span>Объём аквариума</span>
+                <select name="volume">
+                  <option>150 л</option>
+                  <option>300 л</option>
+                  <option>500 л</option>
+                </select>
+              </label>
+              <label class="field">
+                <span id="seo-detail-label"></span>
+                <select name="detail"></select>
+              </label>
+              <button class="button button-primary button-arrow" type="submit">Посмотреть тестовый запрос <span aria-hidden="true">→</span></button>
+            </form>
+            <div id="seo-result" class="case-fields" hidden>
+              <p class="meta">Тестовый запрос</p>
+              <h3 id="seo-result-title" tabindex="-1">Что увидит менеджер</h3>
+              <dl class="ticket-fields">
+                <div><dt>Услуга</dt><dd id="seo-result-service"></dd></div>
+                <div><dt>Объём</dt><dd id="seo-result-volume"></dd></div>
+                <div><dt id="seo-result-label"></dt><dd id="seo-result-detail"></dd></div>
+              </dl>
+              <button class="button button-secondary" id="seo-edit" type="button">Изменить параметры</button>
+            </div>
+          </div>
         </section>
       </section>
 
