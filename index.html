@@ -6,16 +6,21 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#101214">
   <title>Работы — Артём Чадов</title>
-  <link rel="stylesheet" href="styles.b6be049728.css">
+  <link rel="stylesheet" href="styles.29bfd6f71a.css">
   <script src="promotion.97ebb94503.js" defer></script>
-  <script src="inquiries.1eda9ac957.js" defer></script>
-  <script src="app.1377e49148.js" defer></script>
+  <script src="inquiries.80621d6304.js" defer></script>
+  <script src="app.5a506505ac.js" defer></script>
   <script src="cases.6f2cc592d1.js" defer></script>
 </head>
 <body>
   <div class="layout">
-    <aside class="walkthrough" aria-label="О демо">
-      <div id="case-overview">
+    <aside class="walkthrough" aria-label="О разделе">
+      <div id="home-overview">
+        <p class="project-name">Веб-разработчик</p>
+        <h2>Артём<br>Чадов</h2>
+        <p class="walkthrough-description">Выбери задачу и проверь на примере, как работает решение.</p>
+      </div>
+      <div id="case-overview" hidden>
         <p class="project-name">SF WASH</p>
         <h2 id="walkthrough-title">Путь<br>к заявке</h2>
         <p class="walkthrough-description">Оформи тестовую заявку и посмотри её глазами администратора.</p>
@@ -55,14 +60,29 @@
         <button id="back-button" class="back-button" type="button" hidden>
           <span aria-hidden="true">←</span><span id="back-label"></span>
         </button>
-        <span class="demo-label">Демо</span>
+        <span class="demo-label" id="demo-label" hidden>Демо</span>
       </header>
 
       <section class="screen" id="works" aria-labelledby="works-title">
         <div class="screen-head">
-          <h1 id="works-title" tabindex="-1">Работы</h1>
-          <p class="description">Интерактивные примеры Артёма Чадова.</p>
+          <p class="home-author">Артём Чадов</p>
+          <h1 id="works-title" tabindex="-1">Сайты, <span>мини-приложения</span> и продвижение</h1>
         </div>
+        <nav class="task-picker" aria-label="Выбор задачи">
+          <a class="entry-link" href="?case=transkanada&amp;from=works">
+            <span><strong>Нужен сайт</strong><small>Каталог и страницы маршрутов</small></span>
+            <span aria-hidden="true">→</span>
+          </a>
+          <a class="entry-link" href="?entry=portfolio">
+            <span><strong>Нужна онлайн-запись</strong><small>Форма записи и карточка заявки</small></span>
+            <span aria-hidden="true">→</span>
+          </a>
+          <a class="entry-link" href="?section=services">
+            <span><strong>Хочу привлекать клиентов</strong><small>Реклама, Яндекс Карты и SEO</small></span>
+            <span aria-hidden="true">→</span>
+          </a>
+        </nav>
+        <div id="home-contact"></div>
         <article class="work">
           <img class="work-photo entry-photo" src="assets/interior.jpg" width="900" height="506" alt="Мастер чистит сиденье автомобиля">
           <div class="work-body">
@@ -179,6 +199,11 @@
           <summary>Как устроен сайт</summary>
           <p class="description">У каждого тура своя страница и программа. Из списка можно сразу перейти к поездке, которая заинтересовала.</p>
         </details>
+        <section class="entry-section case-credit" aria-labelledby="transkanada-credit-title">
+          <h2 id="transkanada-credit-title">Мой вклад</h2>
+          <p class="description">Спроектировал каталог и страницы туров с программой по дням. На главной разместил маршруты на шкале долготы, чтобы показать географию поездок.</p>
+          <a class="button button-secondary button-arrow" href="https://artem-chadov.github.io/transkanada/" target="_blank" rel="noopener">Открыть весь сайт <span aria-hidden="true">↗</span></a>
+        </section>
       </section>
 
       <section class="screen" id="pablo" aria-labelledby="pablo-title" hidden>
