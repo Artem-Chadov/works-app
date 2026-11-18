@@ -6,8 +6,9 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#101214">
   <title>Работы — Артём Чадов</title>
-  <link rel="stylesheet" href="styles.b3518884c4.css">
-  <script src="app.8ce0831c83.js" defer></script>
+  <link rel="stylesheet" href="styles.1f1610db71.css">
+  <script src="promotion.97ebb94503.js" defer></script>
+  <script src="app.8ef6e06735.js" defer></script>
   <script src="cases.6f2cc592d1.js" defer></script>
 </head>
 <body>
@@ -19,7 +20,7 @@
         <p class="walkthrough-description">Оформи тестовую заявку и посмотри её глазами администратора.</p>
         <nav aria-label="Этапы демо">
           <ol class="steps">
-            <li><button class="step" type="button" data-step="works" aria-current="step"><span class="step-number" aria-hidden="true">01</span><span>Работы</span></button></li>
+            <li><button class="step" type="button" data-step="works" aria-current="step"><span class="step-number" aria-hidden="true">01</span><span id="first-step-label">Работы</span></button></li>
             <li><button class="step" type="button" data-step="service" disabled><span class="step-number" aria-hidden="true">02</span><span>Услуга</span></button></li>
             <li><button class="step" type="button" data-step="request" disabled><span class="step-number" aria-hidden="true">03</span><span>Тестовая заявка</span></button></li>
             <li><button class="step" type="button" data-step="admin" disabled><span class="step-number" aria-hidden="true">04</span><span>Вид администратора</span></button></li>
@@ -35,6 +36,11 @@
         <p class="project-name">Артём Чадов</p>
         <h2>Выбери<br>услугу</h2>
         <p class="walkthrough-description">Открой пример и попробуй действие посетителя.</p>
+      </div>
+      <div id="report-overview" hidden>
+        <p class="project-name">SF WASH</p>
+        <h2>Сравни<br>каналы</h2>
+        <p class="walkthrough-description">Выбери источник, чтобы увидеть его расход и стоимость заявки.</p>
       </div>
     </aside>
 
@@ -71,6 +77,10 @@
             <span><strong>Яндекс Директ</strong><small>Посмотреть объявление</small></span>
             <span aria-hidden="true">→</span>
           </a>
+          <a class="entry-link" href="?entry=target">
+            <span><strong>Таргет</strong><small>Выбрать объявление</small></span>
+            <span aria-hidden="true">→</span>
+          </a>
           <a class="entry-link" href="?entry=maps">
             <span><strong>Яндекс Карты</strong><small>Посмотреть карточку</small></span>
             <span aria-hidden="true">→</span>
@@ -98,6 +108,22 @@
           <h1 id="services-title" tabindex="-1">Услуги</h1>
           <p class="description">Выбери, что хочешь попробовать.</p>
         </div>
+        <section class="entry-section promotion-service" aria-labelledby="promotion-title">
+          <h2 id="promotion-title">Продвижение</h2>
+          <a class="entry-link" href="?entry=direct&amp;from=services">
+            <span><strong>Яндекс Директ</strong><small>Поисковое объявление</small></span>
+            <span aria-hidden="true">→</span>
+          </a>
+          <a class="entry-link" href="?entry=target&amp;from=services">
+            <span><strong>Таргет</strong><small>Два объявления в ленте</small></span>
+            <span aria-hidden="true">→</span>
+          </a>
+          <a class="entry-link" href="?entry=maps&amp;from=services">
+            <span><strong>Яндекс Карты</strong><small>Карточка студии</small></span>
+            <span aria-hidden="true">→</span>
+          </a>
+          <a class="button button-secondary button-arrow" href="?report=all">Открыть учебный отчёт <span aria-hidden="true">→</span></a>
+        </section>
         <div class="demo-list">
           <article class="work">
             <div class="work-body">
@@ -320,6 +346,34 @@
             <button class="button button-primary button-arrow" type="button" data-start="direct">Перейти из объявления <span aria-hidden="true">→</span></button>
           </div>
         </article>
+        <div class="actions">
+          <button class="button button-secondary" type="button" data-open="report" data-report-source="direct">Открыть учебный отчёт</button>
+        </div>
+      </section>
+
+      <section class="screen" id="target" aria-labelledby="target-title" hidden>
+        <div class="screen-head">
+          <h1 id="target-title" tabindex="-1">Таргет</h1>
+          <p class="description">Сравни объявления для одной услуги.</p>
+        </div>
+        <div class="case-choices" role="group" aria-label="Выбор объявления">
+          <button class="prompt" type="button" data-creative="sale" aria-pressed="true">К продаже</button>
+          <button class="prompt" type="button" data-creative="trips" aria-pressed="false">После поездок</button>
+        </div>
+        <article class="work">
+          <img class="work-photo entry-photo" src="assets/interior.jpg" width="900" height="506" alt="Мастер чистит сиденье автомобиля">
+          <div class="work-body">
+            <p class="meta">SF WASH · Пример рекламы в ленте</p>
+            <div aria-live="polite">
+              <h2 class="preview-title" id="creative-title"></h2>
+              <p class="description" id="creative-text"></p>
+            </div>
+            <button class="button button-primary button-arrow" type="button" data-start="target">Перейти из объявления <span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+        <div class="actions">
+          <button class="button button-secondary" type="button" data-open="report" data-report-source="target">Открыть учебный отчёт</button>
+        </div>
       </section>
 
       <section class="screen" id="maps" aria-labelledby="maps-title" hidden>
@@ -339,6 +393,9 @@
             <button class="button button-primary button-arrow" type="button" data-start="maps">Открыть услугу из Карт <span aria-hidden="true">→</span></button>
           </div>
         </article>
+        <div class="actions">
+          <button class="button button-secondary" type="button" data-open="report" data-report-source="maps">Открыть учебный отчёт</button>
+        </div>
       </section>
 
       <section class="screen" id="service" aria-labelledby="service-title" hidden>
@@ -346,6 +403,7 @@
           <p class="origin-label" id="service-origin"></p>
           <h1 id="service-title" tabindex="-1">Химчистка салона</h1>
           <p class="description">SF WASH · Тестовые условия</p>
+          <p class="meta service-creative" id="service-creative" hidden></p>
         </div>
         <article class="work">
           <img class="work-photo entry-photo" src="assets/interior.jpg" width="900" height="506" alt="Чистка сиденья в салоне автомобиля">
@@ -464,6 +522,7 @@
             <div><dt>Посетитель</dt><dd id="ticket-name"></dd></div>
             <div id="ticket-car-row"><dt>Автомобиль</dt><dd id="ticket-car"></dd></div>
             <div id="ticket-time-row"><dt>Удобное время</dt><dd id="ticket-time"></dd></div>
+            <div id="ticket-creative-row" hidden><dt>Объявление</dt><dd id="ticket-creative"></dd></div>
           </dl>
           <div class="excerpt ticket-excerpt" id="ticket-excerpt" hidden>
             <p class="meta">Вопрос из чата</p>
@@ -477,8 +536,48 @@
         </article>
         <div class="actions">
           <button class="button button-primary" id="take-request" type="button">Взять в работу</button>
+          <button class="button button-secondary" id="ticket-report" type="button" data-open="report" hidden>Открыть учебный отчёт</button>
           <button class="button button-secondary" id="restart-button" type="button">Пройти ещё раз</button>
         </div>
+      </section>
+
+      <section class="screen" id="report" aria-labelledby="report-title" hidden>
+        <div class="screen-head">
+          <p class="origin-label">SF WASH · Продвижение</p>
+          <h1 id="report-title" tabindex="-1">Учебный отчёт</h1>
+          <p class="description">Данные за одну условную неделю.</p>
+        </div>
+        <div class="case-choices" role="group" aria-label="Канал продвижения">
+          <button class="prompt" type="button" data-report-filter="all" aria-pressed="true">Все</button>
+          <button class="prompt" type="button" data-report-filter="direct" aria-pressed="false">Директ</button>
+          <button class="prompt" type="button" data-report-filter="target" aria-pressed="false">Таргет</button>
+          <button class="prompt" type="button" data-report-filter="maps" aria-pressed="false">Карты</button>
+        </div>
+        <div class="report-snapshot" aria-live="polite">
+          <dl class="report-metrics">
+            <div><dt>Клики</dt><dd id="report-clicks"></dd></div>
+            <div><dt>Расход</dt><dd id="report-spend"></dd></div>
+            <div><dt>Заявки</dt><dd id="report-leads"></dd></div>
+            <div><dt>Цена заявки</dt><dd id="report-cpl"></dd></div>
+          </dl>
+          <div class="report-formula">
+            <p class="meta">Расход ÷ заявки</p>
+            <p id="report-calculation"></p>
+          </div>
+          <p class="description report-note" id="report-note">Расход по Картам — пример платного размещения.</p>
+        </div>
+        <section class="entry-section report-breakdown" id="report-breakdown" aria-labelledby="report-breakdown-title" hidden>
+          <h2 id="report-breakdown-title"></h2>
+          <table class="report-table">
+            <thead><tr><th scope="col" id="report-group-label"></th><th scope="col">Клики</th><th scope="col">Цена заявки</th></tr></thead>
+            <tbody id="report-rows"></tbody>
+          </table>
+        </section>
+        <section id="report-session" class="excerpt report-session" aria-label="Текущее прохождение" hidden>
+          <p class="meta">Текущее прохождение</p>
+          <p id="report-session-source"></p>
+          <p id="report-session-ticket" class="description"></p>
+        </section>
       </section>
       <noscript><p class="noscript">Включи JavaScript, чтобы пройти прототип.</p></noscript>
     </main>
