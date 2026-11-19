@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="description" content="Артём Чадов. Сайты, мини-приложения, боты и продвижение для бизнеса. Попробуй интерактивные кейсы и оставь заявку на свой проект.">
+  <meta name="description" content="Артём Чадов. Делаю сайты, мини-приложения и ботов, настраиваю рекламу и SEO. Посмотрите работы и попробуйте, как клиент доходит до заявки.">
   <meta name="theme-color" content="#101214">
   <title>Артём Чадов — сайты, мини-приложения и продвижение</title>
   <link rel="canonical" href="https://artem-chadov.github.io/works-app/">
@@ -11,7 +11,7 @@
   <meta property="og:locale" content="ru_RU">
   <meta property="og:url" content="https://artem-chadov.github.io/works-app/">
   <meta property="og:title" content="Артём Чадов — сайты, мини-приложения и продвижение">
-  <meta property="og:description" content="Попробуй интерактивные кейсы и посмотри, как клиент доходит до заявки.">
+  <meta property="og:description" content="Попробуйте запись, бота или рекламу и посмотрите, что получит администратор.">
   <meta property="og:image" content="https://artem-chadov.github.io/works-app/assets/portfolio-share.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -22,18 +22,21 @@
   <link rel="preload" as="font" href="assets/unbounded-latin.woff2" type="font/woff2" crossorigin>
   <script>
     const initialRoute = new URLSearchParams(location.search);
-    if (["case", "entry", "demo", "report", "section"].some((key) => initialRoute.has(key))) {
+    if (["case", "entry", "demo", "report", "section", "service"].some((key) => initialRoute.has(key))) {
       document.documentElement.classList.add("route-pending");
       document.addEventListener("DOMContentLoaded", () => {
         document.documentElement.classList.remove("route-pending");
       }, { once: true });
     }
   </script>
-  <link rel="stylesheet" href="styles.f3dd46355d.css">
-  <script src="promotion.97ebb94503.js" defer></script>
-  <script src="inquiries.90c274fbfb.js" defer></script>
-  <script src="app.d44db8fb2c.js" defer></script>
-  <script src="cases.6f2cc592d1.js" defer></script>
+  <link rel="stylesheet" href="styles.cbfa8df364.css">
+  <script src="motion.ab135e16b5.js" defer></script>
+  <script src="services.af6bd7ff3e.js" defer></script>
+  <script src="telegram.b798118d8f.js" defer></script>
+  <script src="promotion.60789d6414.js" defer></script>
+  <script src="inquiries.774ad5abd7.js" defer></script>
+  <script src="app.ad1973375d.js" defer></script>
+  <script src="cases.77b25c0880.js" defer></script>
 </head>
 <body>
   <div class="layout layout-hub">
@@ -41,7 +44,7 @@
       <div id="case-overview" hidden>
         <p class="project-name">SF WASH</p>
         <h2 id="walkthrough-title">Путь<br>к заявке</h2>
-        <p class="walkthrough-description">Оформи тестовую заявку и посмотри её глазами администратора.</p>
+        <p class="walkthrough-description">Пройдите запись и посмотрите, что получит администратор.</p>
         <nav aria-label="Этапы демо">
           <ol class="steps">
             <li><button class="step" type="button" data-step="works" aria-current="step"><span class="step-number" aria-hidden="true">01</span><span id="first-step-label">Работы</span></button></li>
@@ -54,17 +57,17 @@
       <div id="demo-overview" hidden>
         <p class="project-name">Работы</p>
         <h2>Демо<br>ботов</h2>
-        <p class="walkthrough-description">Пройди запись по кнопкам или задай вопрос о химчистке.</p>
+        <p class="walkthrough-description">Запишитесь по кнопкам или задайте вопрос о химчистке.</p>
       </div>
       <div id="portfolio-overview" hidden>
         <p class="project-name">Артём Чадов</p>
         <h2>Пример<br>работы</h2>
-        <p class="walkthrough-description">Попробуй действие клиента и обсуди свой проект.</p>
+        <p class="walkthrough-description">Можно пройти весь сценарий и обсудить похожую задачу.</p>
       </div>
       <div id="report-overview" hidden>
         <p class="project-name">SF WASH</p>
-        <h2>Сравни<br>каналы</h2>
-        <p class="walkthrough-description">Выбери источник, чтобы увидеть его расход и стоимость заявки.</p>
+        <h2>Реклама<br>в цифрах</h2>
+        <p class="walkthrough-description">Выберите канал и посмотрите, во сколько обошлась заявка в примере.</p>
       </div>
     </aside>
 
@@ -84,42 +87,44 @@
       <section class="screen" id="works" aria-labelledby="works-title">
         <div class="portfolio-intro">
           <div class="screen-head">
-            <h1 id="works-title" tabindex="-1">Сайты,<br><span>мини-приложения</span><br>и продвижение</h1>
             <p class="portfolio-owner">Артём Чадов · Псков и удалённо</p>
-            <p class="description">Пройди путь клиента и посмотри, какую заявку получит бизнес.</p>
-          </div>
-          <div>
-            <nav class="task-picker" aria-label="Выбор задачи">
-              <a class="entry-link" href="?case=transkanada&amp;from=works">
-                <span><strong>Нужен сайт</strong><small>Каталог и страницы маршрутов</small></span>
-                <span aria-hidden="true">→</span>
-              </a>
-              <a class="entry-link" href="?entry=portfolio">
-                <span><strong>Нужна онлайн-запись</strong><small>Форма записи и карточка заявки</small></span>
-                <span aria-hidden="true">→</span>
-              </a>
-              <a class="entry-link" href="?section=services">
-                <span><strong>Хочу привлекать клиентов</strong><small>Реклама, Яндекс Карты и SEO</small></span>
-                <span aria-hidden="true">→</span>
-              </a>
-            </nav>
+            <h1 id="works-title" tabindex="-1">Сайты, боты<br>и продвижение</h1>
+            <p class="description">Делаю сайты и мини-приложения, подключаю запись и настраиваю рекламу. Пройдите любой пример и посмотрите, какую заявку получит администратор.</p>
             <div id="home-contact">
               <div class="case-contact" id="case-contact">
                 <button class="button button-secondary button-arrow" id="discuss-button" type="button" aria-haspopup="dialog" disabled>Обсудить проект <span aria-hidden="true">→</span></button>
               </div>
             </div>
           </div>
+          <nav class="task-picker" aria-label="Что вам нужно">
+            <a class="entry-link" href="?service=sites">
+              <span><strong>Сделать сайт</strong><small>Услуги, каталог или отдельная страница</small></span>
+              <span aria-hidden="true">→</span>
+            </a>
+            <a class="entry-link" href="?service=booking">
+              <span><strong>Записывать клиентов онлайн</strong><small>Форма, мини-приложение или бот</small></span>
+              <span aria-hidden="true">→</span>
+            </a>
+            <a class="entry-link" href="?service=chatbots">
+              <span><strong>Отвечать на вопросы</strong><small>Чат-бот или помощник со справкой</small></span>
+              <span aria-hidden="true">→</span>
+            </a>
+            <a class="entry-link" href="?section=services#promotion-title">
+              <span><strong>Привлекать клиентов</strong><small>Реклама, Яндекс Карты и SEO</small></span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </nav>
         </div>
 
         <section class="portfolio-cases" aria-labelledby="portfolio-cases-title">
-          <h2 id="portfolio-cases-title">Интерактивные кейсы</h2>
+          <h2 id="portfolio-cases-title">Примеры работ</h2>
           <div class="portfolio-grid">
             <a class="portfolio-card" href="?case=transkanada&amp;from=works">
               <img src="assets/rockies.jpg" width="1280" height="862" alt="" loading="lazy" decoding="async">
               <div class="portfolio-card-body">
                 <p class="meta">Сайт · Авторский концепт</p>
                 <h3>Трансканада</h3>
-                <p class="description">Выбери тур и открой программу по дням.</p>
+                <p class="description">Каталог туров с программой по дням.</p>
               </div>
             </a>
             <a class="portfolio-card" href="?entry=portfolio">
@@ -127,7 +132,7 @@
               <div class="portfolio-card-body">
                 <p class="meta">Онлайн-запись · Демо</p>
                 <h3>SF WASH</h3>
-                <p class="description">Запишись и посмотри заявку.</p>
+                <p class="description">Запись на услугу и заявка у администратора.</p>
               </div>
             </a>
             <a class="portfolio-card" href="?case=pablo&amp;from=works">
@@ -135,7 +140,7 @@
               <div class="portfolio-card-body">
                 <p class="meta">Мини-приложение · Демо</p>
                 <h3>Пабло</h3>
-                <p class="description">Посмотри меню и попробуй запросить стол.</p>
+                <p class="description">Меню и запрос столика с телефона.</p>
               </div>
             </a>
             <a class="portfolio-card" href="?case=elementaqua&amp;from=works">
@@ -147,7 +152,7 @@
               <div class="portfolio-card-body">
                 <p class="meta">SEO · Аудит и макеты</p>
                 <h3>ElementAqua</h3>
-                <p class="description">Сравни, какие страницы нужны под разные запросы.</p>
+                <p class="description">Два запроса и две страницы услуг.</p>
               </div>
             </a>
           </div>
@@ -158,66 +163,66 @@
         <div class="screen-head service-heading">
           <div>
             <h1 id="services-title" tabindex="-1">Услуги</h1>
-            <p class="description">Выбери услугу и попробуй её на конкретном примере.</p>
+            <p class="description">Выберите задачу. Расскажу, что могу сделать, и покажу пример, который можно попробовать.</p>
           </div>
           <div id="services-contact"></div>
         </div>
         <div class="service-grid">
-        <section class="entry-section promotion-service" aria-labelledby="promotion-title">
-          <h2 id="promotion-title">Продвижение</h2>
-          <a class="entry-link" href="?entry=direct&amp;from=services">
-            <span><strong>Яндекс Директ</strong><small>Поисковое объявление</small></span>
-            <span aria-hidden="true">→</span>
-          </a>
-          <a class="entry-link" href="?entry=target&amp;from=services">
-            <span><strong>Таргет</strong><small>Два объявления в ленте</small></span>
-            <span aria-hidden="true">→</span>
-          </a>
-          <a class="entry-link" href="?entry=maps&amp;from=services">
-            <span><strong>Яндекс Карты</strong><small>Карточка студии</small></span>
-            <span aria-hidden="true">→</span>
-          </a>
-          <a class="entry-link" href="?case=elementaqua">
-            <span><strong>SEO</strong><small>Поисковые запросы и страницы услуг</small></span>
-            <span aria-hidden="true">→</span>
-          </a>
-          <a class="button button-secondary button-arrow" href="?report=all">Открыть учебный отчёт <span aria-hidden="true">→</span></a>
-        </section>
-        <div class="demo-list">
-          <article class="work">
-            <div class="work-body">
-              <h2 class="preview-title">Сайты</h2>
-              <p class="description">Лендинги, каталоги, сайты услуг.</p>
-              <a class="button button-secondary button-arrow" href="?case=transkanada">Выбрать маршрут <span aria-hidden="true">→</span></a>
+          <section class="service-group" aria-labelledby="build-title">
+            <h2 id="build-title">Сайты и запись</h2>
+            <a class="entry-link" href="?service=sites"><span><strong>Сайты</strong><small>Страницы услуг, лендинги и каталоги</small></span><span aria-hidden="true">→</span></a>
+            <a class="entry-link" href="?service=miniapps"><span><strong>Мини-приложения</strong><small>Меню, бронь и другие действия в несколько шагов</small></span><span aria-hidden="true">→</span></a>
+            <a class="entry-link" href="?service=booking"><span><strong>Онлайн-запись</strong><small>Выбор услуги и времени с телефона</small></span><span aria-hidden="true">→</span></a>
+          </section>
+          <section class="service-group" aria-labelledby="automation-title">
+            <h2 id="automation-title">Боты и заявки</h2>
+            <a class="entry-link" href="?service=chatbots"><span><strong>Чат-боты</strong><small>Принимают заявки и ведут по шагам</small></span><span aria-hidden="true">→</span></a>
+            <a class="entry-link" href="?service=neurobots"><span><strong>Нейроботы</strong><small>Отвечают по вашим материалам</small></span><span aria-hidden="true">→</span></a>
+            <a class="entry-link" href="?service=automation"><span><strong>Автоматизация заявок</strong><small>Заявка и её источник сразу у сотрудника</small></span><span aria-hidden="true">→</span></a>
+          </section>
+          <section class="service-group service-group-promotion" aria-labelledby="promotion-title">
+            <h2 id="promotion-title" tabindex="-1">Продвижение</h2>
+            <div class="service-group-links">
+              <a class="entry-link" href="?service=direct"><span><strong>Яндекс Директ</strong><small>Показать услугу тем, кто уже её ищет</small></span><span aria-hidden="true">→</span></a>
+              <a class="entry-link" href="?service=target"><span><strong>Таргетированная реклама</strong><small>Сравнить объявления в ленте</small></span><span aria-hidden="true">→</span></a>
+              <a class="entry-link" href="?service=maps"><span><strong>Яндекс Карты</strong><small>Помочь найти вас рядом и записаться</small></span><span aria-hidden="true">→</span></a>
+              <a class="entry-link" href="?service=seo"><span><strong>SEO</strong><small>Подготовить страницы под запросы в поиске</small></span><span aria-hidden="true">→</span></a>
             </div>
-          </article>
-          <article class="work">
-            <div class="work-body">
-              <h2 class="preview-title">Мини-приложения</h2>
-              <p class="description">Меню, запись и бронирование.</p>
-              <a class="button button-secondary button-arrow" href="?case=pablo">Открыть «Пабло» <span aria-hidden="true">→</span></a>
-            </div>
-          </article>
-          <article class="work">
-            <div class="work-body">
-              <h2 class="preview-title">Чат-боты и нейроботы</h2>
-              <p class="description">Ответы и запись по кнопкам.</p>
-              <a class="button button-secondary button-arrow" href="?section=demos">Попробовать ботов <span aria-hidden="true">→</span></a>
-            </div>
-          </article>
-        </div>
+            <a class="text-link service-report-link" href="?report=all">Учебный отчёт по рекламе <span aria-hidden="true">→</span></a>
+          </section>
         </div>
         <section class="service-start" aria-labelledby="service-start-title">
-          <h2 id="service-start-title">Как начать проект</h2>
-          <p class="description">Опиши задачу и оставь контакт. Я уточню детали, предложу первый шаг и согласую с тобой объём и сроки.</p>
+          <h2 id="service-start-title">С чего начать</h2>
+          <p class="description">Расскажите, чем занимаетесь и что хотите изменить. Я посмотрю, что у вас уже есть, и предложу первый шаг. Объём и сроки обсудим до начала работы.</p>
         </section>
+      </section>
+
+      <section class="screen" id="offer" aria-labelledby="offer-title" hidden>
+        <div class="screen-head offer-head">
+          <div>
+            <h1 id="offer-title" tabindex="-1"></h1>
+            <p class="description" id="offer-description"></p>
+          </div>
+          <div id="offer-contact"></div>
+        </div>
+        <div class="offer-layout">
+          <section class="offer-preview" aria-labelledby="offer-example-title">
+            <h2 id="offer-example-title">Попробуйте на примере</h2>
+            <p id="offer-example"></p>
+            <a class="button button-primary button-arrow" id="offer-demo" href="?section=services"><span></span><span class="arrow" aria-hidden="true">→</span></a>
+          </section>
+          <section class="offer-work" aria-labelledby="offer-scope-title">
+            <h2 id="offer-scope-title">Что входит в работу</h2>
+            <ul class="offer-scope" id="offer-scope"></ul>
+          </section>
+        </div>
       </section>
 
       <section class="screen" id="transkanada" aria-labelledby="transkanada-title" hidden>
         <div class="screen-head">
           <p class="origin-label">Сайты · Авторский концепт</p>
           <h1 id="transkanada-title" tabindex="-1">Трансканада</h1>
-          <p class="description">Выбери маршрут и открой программу поездки.</p>
+          <p class="description">На сайте можно сравнить поездки. Выберите маршрут и откройте первые три дня программы.</p>
         </div>
         <div class="case-choices" role="group" aria-label="Маршрут">
           <button class="prompt" type="button" data-trip="rockies" aria-pressed="true">Скалистые горы</button>
@@ -240,11 +245,11 @@
         </article>
         <details class="case-details case-note">
           <summary>Как устроен сайт</summary>
-          <p class="description">У каждого тура своя страница и программа. Из списка можно сразу перейти к поездке, которая заинтересовала.</p>
+          <p class="description">В каталоге можно быстро сравнить длительность и направления. У каждого тура своя страница с программой.</p>
         </details>
         <section class="entry-section case-credit" aria-labelledby="transkanada-credit-title">
           <h2 id="transkanada-credit-title">Мой вклад</h2>
-          <p class="description">Спроектировал каталог и страницы туров с программой по дням. На главной разместил маршруты на шкале долготы, чтобы показать географию поездок.</p>
+          <p class="description">Я собрал каталог и страницы туров с программой по дням. На главной разложил маршруты по долготе, чтобы можно было прикинуть, куда едешь.</p>
           <a class="button button-secondary button-arrow" href="https://artem-chadov.github.io/transkanada/" target="_blank" rel="noopener">Открыть весь сайт <span aria-hidden="true">↗</span></a>
         </section>
       </section>
@@ -253,7 +258,7 @@
         <div class="screen-head">
           <p class="origin-label">Мини-приложения · Демо</p>
           <h1 id="pablo-title" tabindex="-1">Пабло</h1>
-          <p class="description">Посмотри меню и запроси стол на удобное время.</p>
+          <p class="description">Я собрал на одном экране меню и переход к брони. Посмотрите блюда, выберите время и проверьте, какой запрос получит администратор.</p>
         </div>
         <article class="work">
           <img class="work-photo case-photo pablo-photo" src="assets/pablo.jpg" width="1000" height="666" alt="Зал гастропаба «Пабло»" loading="lazy">
@@ -264,13 +269,13 @@
               <button class="prompt" type="button" data-menu="salads" aria-pressed="false">Салаты</button>
             </div>
             <ul class="case-list menu-list" id="pablo-menu" aria-live="polite"></ul>
-            <button class="button button-primary button-arrow" id="pablo-book" type="button" aria-expanded="false" aria-controls="pablo-booking">Запросить стол <span aria-hidden="true">→</span></button>
+            <button class="button button-primary button-arrow" id="pablo-book" type="button" aria-expanded="false" aria-controls="pablo-booking">Запросить столик <span aria-hidden="true">→</span></button>
           </div>
         </article>
         <section class="work case-followup" id="pablo-booking" aria-labelledby="pablo-booking-title" hidden>
           <div class="work-body">
-            <h2 class="preview-title" id="pablo-booking-title" tabindex="-1">Запрос стола</h2>
-            <p class="description">Время и наличие столов в демо условные.</p>
+            <h2 class="preview-title" id="pablo-booking-title" tabindex="-1">Запрос столика</h2>
+            <p class="description">В примере время условное. Запрос останется в этой вкладке.</p>
             <form class="request-form case-fields" id="pablo-form">
               <label class="field">
                 <span>День</span>
@@ -282,7 +287,7 @@
               <label class="field">
                 <span>Время</span>
                 <select name="time" required>
-                  <option value="">Выбери время</option>
+                  <option value="">Выберите время</option>
                   <option value="18:00">18:00</option>
                   <option value="19:30">19:30</option>
                   <option value="21:00">21:00</option>
@@ -318,7 +323,7 @@
         <div class="screen-head">
           <p class="origin-label">SEO · Аудит и макеты</p>
           <h1 id="elementaqua-title" tabindex="-1">ElementAqua</h1>
-          <p class="description">Выбери запрос и открой подходящую страницу услуги.</p>
+          <p class="description">Я разобрал две услуги, которые люди ищут по-разному. Выберите запрос и посмотрите, что найдёт человек на подходящей странице.</p>
         </div>
         <div class="case-choices" role="group" aria-label="Выбор поискового запроса">
           <button class="prompt" type="button" data-seo="move" aria-pressed="true">Перевозка</button>
@@ -334,13 +339,13 @@
             <h2 class="preview-title" id="seo-page-title"></h2>
             <p class="description" id="seo-page-description"></p>
             <details class="case-details">
-              <summary>Что предложено изменить</summary>
+              <summary>Что я предложил изменить</summary>
               <dl class="seo-comparison">
                 <div><dt>В аудите</dt><dd id="seo-before"></dd></div>
                 <div><dt>В макете</dt><dd id="seo-after"></dd></div>
               </dl>
             </details>
-            <button class="button button-primary button-arrow" id="seo-next" type="button" aria-expanded="false" aria-controls="seo-parameters">Собрать параметры <span aria-hidden="true">→</span></button>
+            <button class="button button-primary button-arrow" id="seo-next" type="button" aria-expanded="false" aria-controls="seo-parameters">Посмотреть форму услуги <span aria-hidden="true">→</span></button>
           </div>
         </article>
         <section class="work case-followup" id="seo-parameters" aria-labelledby="seo-params-title" hidden>
@@ -378,20 +383,20 @@
       <section class="screen" id="demos" aria-labelledby="demos-title" hidden>
         <div class="screen-head">
           <h1 id="demos-title" tabindex="-1">Демо ботов</h1>
-          <p class="description">Оба примера работают прямо в браузере.</p>
+          <p class="description">Попробуйте запись по кнопкам или напишите вопрос своими словами.</p>
         </div>
         <div class="demo-list">
           <article class="work">
             <div class="work-body">
               <h2 class="preview-title">Чат-бот записи</h2>
-              <p class="description">Выбери автомобиль и время.</p>
+              <p class="description">Бот спросит, на какой машине вы приедете и когда вам удобно.</p>
               <a class="button button-secondary button-arrow" href="?demo=chatbot">Попробовать чат-бота <span aria-hidden="true">→</span></a>
             </div>
           </article>
           <article class="work">
             <div class="work-body">
               <h2 class="preview-title">Нейробот по услугам</h2>
-              <p class="description">Спроси о химчистке салона.</p>
+              <p class="description">Справка отвечает на вопросы о химчистке. Остальные можно передать администратору.</p>
               <a class="button button-secondary button-arrow" href="?demo=neuro">Попробовать нейробота <span aria-hidden="true">→</span></a>
             </div>
           </article>
@@ -401,7 +406,7 @@
       <section class="screen" id="direct" aria-labelledby="direct-title" hidden>
         <div class="screen-head">
           <h1 id="direct-title" tabindex="-1">Яндекс Директ</h1>
-          <p class="description">Пример объявления на поиске</p>
+          <p class="description">Набрал запрос, увидел объявление, перешёл к записи. Посмотрите этот путь на примере SF WASH.</p>
         </div>
         <div class="search-query">
           <p class="meta">Что искал человек</p>
@@ -411,7 +416,7 @@
           <div class="work-body">
             <p class="meta">SF WASH · Пример рекламы</p>
             <h2 class="preview-title">Химчистка салона в Пскове</h2>
-            <p class="description">Посмотри, что входит в химчистку, и выбери удобное время.</p>
+            <p class="description">Посмотрите, что входит в химчистку, и выберите удобное время.</p>
             <button class="button button-primary button-arrow" type="button" data-start="direct">Перейти из объявления <span aria-hidden="true">→</span></button>
           </div>
         </article>
@@ -423,7 +428,7 @@
       <section class="screen" id="target" aria-labelledby="target-title" hidden>
         <div class="screen-head">
           <h1 id="target-title" tabindex="-1">Таргет</h1>
-          <p class="description">Сравни объявления для одной услуги.</p>
+          <p class="description">Здесь два объявления для одной услуги. Переключите их и посмотрите, как выбранный вариант попадёт в заявку.</p>
         </div>
         <div class="case-choices" role="group" aria-label="Выбор объявления">
           <button class="prompt" type="button" data-creative="sale" aria-pressed="true">К продаже</button>
@@ -448,7 +453,7 @@
       <section class="screen" id="maps" aria-labelledby="maps-title" hidden>
         <div class="screen-head">
           <h1 id="maps-title" tabindex="-1">Яндекс Карты</h1>
-          <p class="description">Пример карточки организации</p>
+          <p class="description">В демо карточка ведёт сразу к нужной услуге. Источник перехода будет виден у администратора.</p>
         </div>
         <article class="work">
           <img class="work-photo entry-photo" src="assets/interior.jpg" width="900" height="506" alt="Мастер чистит автомобильное сиденье">
@@ -485,14 +490,14 @@
           </div>
         </article>
         <div class="actions">
-          <button class="button button-primary button-arrow" type="button" data-open="request">К тестовой заявке <span aria-hidden="true">→</span></button>
+          <button class="button button-primary button-arrow" type="button" data-open="request">Попробовать запись <span aria-hidden="true">→</span></button>
         </div>
       </section>
 
       <section class="screen" id="chat" aria-labelledby="chat-title" hidden>
         <div class="screen-head">
           <h1 id="chat-title" tabindex="-1">Нейробот SF WASH</h1>
-          <p class="description">Отвечает по демо-справке. Вопрос можно передать в демо-входящие.</p>
+          <p class="description">Я настроил демо на вопросы о цене, времени и составе услуги. Спросите своими словами или передайте вопрос администратору.</p>
         </div>
         <div class="thread" id="thread" role="log" aria-label="Диалог с нейроботом" aria-live="polite" tabindex="0">
           <div id="first-message" class="message message-bot">
@@ -506,7 +511,7 @@
           <button class="prompt" type="button">Что входит?</button>
         </div>
         <form class="composer" id="question-form" autocomplete="off">
-          <input id="question" type="text" maxlength="160" aria-label="Твой вопрос" placeholder="Твой вопрос" required>
+          <input id="question" type="text" maxlength="160" aria-label="Ваш вопрос" placeholder="Ваш вопрос" required>
           <button class="send-question" type="submit" aria-label="Отправить вопрос"><span aria-hidden="true">↑</span></button>
         </form>
         <button class="button button-primary chat-next" id="hand-off" type="button" disabled>Передать администратору</button>
@@ -515,7 +520,7 @@
       <section class="screen" id="request" aria-labelledby="request-title" hidden>
         <div class="screen-head">
           <h1 id="request-title" tabindex="-1">Тестовая заявка</h1>
-          <p class="description">Данные останутся в этой вкладке.</p>
+          <p class="description">Это тест. Можно оставить пример имени, данные останутся в этой вкладке.</p>
         </div>
         <div id="request-body" class="request-form">
           <div class="summary-row">
@@ -601,6 +606,10 @@
             <p class="meta">Нужен ответ</p>
             <p id="ticket-pending-question"></p>
           </div>
+          <section class="ticket-history" aria-labelledby="ticket-history-title">
+            <h3 id="ticket-history-title">История заявки</h3>
+            <ol id="ticket-history" aria-live="polite"></ol>
+          </section>
         </article>
         <div class="actions">
           <button class="button button-primary" id="take-request" type="button">Взять в работу</button>
@@ -613,7 +622,7 @@
         <div class="screen-head">
           <p class="origin-label">SF WASH · Продвижение</p>
           <h1 id="report-title" tabindex="-1">Учебный отчёт</h1>
-          <p class="description">Данные за одну условную неделю.</p>
+          <p class="description">Цифры учебные. Можно сравнить каналы и посмотреть, сколько стоила заявка в каждом из них.</p>
         </div>
         <div class="case-choices" role="group" aria-label="Канал продвижения">
           <button class="prompt" type="button" data-report-filter="all" aria-pressed="true">Все</button>
@@ -656,7 +665,7 @@
         <p class="origin-label" id="inquiry-origin"></p>
         <h2 id="inquiry-title">Обсудить проект</h2>
         <form class="request-form inquiry-form" id="inquiry-form" novalidate>
-          <p class="description">Артём получит заявку в Telegram и ответит по указанному контакту.</p>
+          <p class="description">Напишите, что хотите сделать. Я получу сообщение в Telegram и отвечу по вашему контакту.</p>
           <div class="field">
             <label for="inquiry-contact">Контакт для ответа</label>
             <p class="meta" id="inquiry-contact-hint">Telegram, телефон или почта</p>
@@ -675,12 +684,12 @@
         </form>
         <div class="inquiry-result" id="inquiry-result" hidden>
           <h3 id="inquiry-success" tabindex="-1">Заявка отправлена</h3>
-          <p class="description">Артём получил заявку и твой контакт.</p>
+          <p class="description">Я получил задачу и ваш контакт. Отвечу лично.</p>
           <p class="meta" id="inquiry-reference"></p>
           <button class="button button-secondary" id="inquiry-done" type="button">К кейсу</button>
         </div>
       </dialog>
-      <noscript><p class="noscript">Включи JavaScript, чтобы открыть демо и форму заявки.</p></noscript>
+      <noscript><p class="noscript">Включите JavaScript, чтобы открыть демо и форму заявки.</p></noscript>
     </main>
   </div>
 </body>
